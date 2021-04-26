@@ -13,9 +13,9 @@ namespace DIO.Series.Test
         const int SerieAno = 2021;
         const string SerieDescricao = "Descricao ficticia";
         Serie Instancia;
-        
+
         [Fact]
-        public void Serie_Instanciacao_Sucesso()
+        public void Serie_Instanciacao_DeveRetornarObjeto()
         {
         //Given
         //When
