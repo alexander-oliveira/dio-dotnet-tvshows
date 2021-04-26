@@ -7,11 +7,12 @@ namespace DIO.Series.Class
     {
         public Serie(int id, Genero genero, string titulo, int ano, string descricao)
         {
-            Id = id;
-            Genero = genero;
-            Titulo = titulo;
-            Ano = ano;
-            Descricao = descricao;
+            this.Id = id;
+            this.Genero = genero;
+            this.Titulo = titulo;
+            this.Ano = ano;
+            this.Descricao = descricao;
+            this.Excluido = false;
         }
 
         private Genero Genero { get; set; }
