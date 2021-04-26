@@ -12,17 +12,25 @@ namespace DIO.Series.Test
         const String SerieTitulo = "Serie ficticia";
         const int SerieAno = 2021;
         const string SerieDescricao = "Descricao ficticia";
-        Serie Instancia;
-
+        Serie Instancia = new Serie(id: SerieId, genero: SerieGenero, titulo: SerieTitulo, ano: SerieAno, descricao: SerieDescricao);
         [Fact]
         public void Serie_Instanciacao_DeveRetornarObjeto()
         {
         //Given
         //When
-            Instancia = new Serie(id: SerieId, genero: SerieGenero, titulo: SerieTitulo, ano: SerieAno, descricao: SerieDescricao);
         //Then
             Assert.NotNull(Instancia);
             Assert.True(Instancia.Id == SerieId);
+        }
+        [Fact]
+        public void SerieInstanciada_ComArgumentosValidos_DeveRetornarTituloDefinido()
+        {
+        //Given
+        
+        //When
+        
+        //Then
+            Assert.True(Instancia.retornaTitulo() == SerieTitulo);
         }
     }
 }
