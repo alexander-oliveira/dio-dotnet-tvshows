@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\enum\DIO.Series.csproj" />
+    <ProjectReference Include="..\enum\DIO.Series.Enum.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

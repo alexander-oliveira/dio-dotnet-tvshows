@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\classes\DIO.Series.csproj" />
-    <ProjectReference Include="..\enum\DIO.Series.csproj" />
+    <ProjectReference Include="..\classes\DIO.Series.Class.csproj" />
+    <ProjectReference Include="..\enum\DIO.Series.Enum.csproj" />
   </ItemGroup>
 
 </Project>
