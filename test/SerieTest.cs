@@ -22,6 +22,7 @@ namespace DIO.Series.Test
             Instancia = new Serie(id: SerieId, genero: SerieGenero, titulo: SerieTitulo, ano: SerieAno, descricao: SerieDescricao);
         //Then
             Assert.NotNull(Instancia);
+            Assert.True(Instancia.Id == SerieId);
         }
     }
 }
