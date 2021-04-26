@@ -19,5 +19,10 @@ namespace DIO.Series.Class
             this.Descricao = descricao;
             this.Excluido = false;
         }
+
+        public string retornaTitulo()
+        {
+            return this.Titulo;
+        }
     }    
 }
