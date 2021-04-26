@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\classes\DIO.Series.csproj" />
+    <ProjectReference Include="..\enum\DIO.Series.csproj" />
   </ItemGroup>
 
 </Project>
