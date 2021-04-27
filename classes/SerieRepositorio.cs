@@ -5,6 +5,7 @@ namespace DIO.Series.Class
 {
     public class SerieRepositorio : IRepositorio<Serie>
     {
+        private List<Serie> ListaSerie = new List<Serie>();
         public void Atualiza(int id, Serie entidade)
         {
             throw new NotImplementedException();
@@ -22,7 +23,7 @@ namespace DIO.Series.Class
 
         public List<Serie> Lista()
         {
-            throw new NotImplementedException();
+            return ListaSerie;
         }
 
         public int ProximoId()
