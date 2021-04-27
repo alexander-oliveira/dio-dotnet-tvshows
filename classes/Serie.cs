@@ -34,5 +34,10 @@ namespace DIO.Series.Class
         {
             return this.Excluido;
         }
+
+        public void Excluir()
+        {
+            this.Excluido = true;
+        }
     }    
 }
