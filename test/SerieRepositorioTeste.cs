@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 using DIO.Series.Interfaces;
 using DIO.Series.Class;
@@ -17,6 +18,17 @@ namespace DIO.Series.Test
             Assert.NotNull(RepositorioFicticio);
             Assert.IsType<SerieRepositorio>(RepositorioFicticio);
             Assert.IsAssignableFrom<IRepositorio<Serie>>(RepositorioFicticio);
+        }
+        [Fact]
+        public void SerieRepositorio_AoinvocarMetodoLista_DeveRetornarListaDoTipoSerie()
+        {
+        //Given
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+        //When
+            Object ListaDeSeries = RepositorioFicticio.Lista();
+        //Then
+            Assert.NotNull(ListaDeSeries);
+            Assert.IsType<List<Serie>>(ListaDeSeries);
         }
     }
 }
