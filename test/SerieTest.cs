@@ -52,5 +52,6 @@ namespace DIO.Series.Test
         
         //Then
             Assert.True(Instancia.RetornaExcluido() == SerieExcluido);
+        }
     }
 }
