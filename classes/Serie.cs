@@ -20,7 +20,7 @@ namespace DIO.Series.Class
             this.Excluido = false;
         }
 
-        public string retornaTitulo()
+        public string RetornaTitulo()
         {
             return this.Titulo;
         }

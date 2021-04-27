@@ -30,7 +30,7 @@ namespace DIO.Series.Test
         //When
         
         //Then
-            Assert.True(Instancia.retornaTitulo() == SerieTitulo);
+            Assert.True(Instancia.RetornaTitulo() == SerieTitulo);
         }
         [Fact]
         public void SerieInstaciada_ComArgumentosValidos_DeveRetornarId()
