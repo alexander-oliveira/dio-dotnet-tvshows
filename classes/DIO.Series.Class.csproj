@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\enum\DIO.Series.Enum.csproj" />
+    <ProjectReference Include="..\interfaces\DIO.Series.Interfaces.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

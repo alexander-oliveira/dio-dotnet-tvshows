@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.Test", "test\DIO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.Enum", "enum\DIO.Series.Enum.csproj", "{136882B4-DC2D-4F61-B2B7-8CE1BA6441FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.Interfaces", "interfaces\DIO.Series.Interfaces.csproj", "{DCB45729-EDF1-4A9A-9D4D-82798998810A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{136882B4-DC2D-4F61-B2B7-8CE1BA6441FD}.Release|x64.Build.0 = Release|Any CPU
 		{136882B4-DC2D-4F61-B2B7-8CE1BA6441FD}.Release|x86.ActiveCfg = Release|Any CPU
 		{136882B4-DC2D-4F61-B2B7-8CE1BA6441FD}.Release|x86.Build.0 = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|x64.Build.0 = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|x64.ActiveCfg = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|x64.Build.0 = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DCB45729-EDF1-4A9A-9D4D-82798998810A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
