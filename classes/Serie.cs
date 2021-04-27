@@ -29,5 +29,10 @@ namespace DIO.Series.Class
         {
             return this.Id;
         }
+
+        public bool RetornaExcluido()
+        {
+            return this.Excluido;
+        }
     }    
 }
