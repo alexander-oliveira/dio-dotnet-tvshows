@@ -39,5 +39,14 @@ namespace DIO.Series.Class
         {
             this.Excluido = true;
         }
+        public override string ToString()
+        {
+            string Registro = "";
+            Registro += "Titulo (Ano):" + this.Titulo + "("+this.Ano+")" + Environment.NewLine;
+            Registro += "Descrição: " + this.Descricao + Environment.NewLine;
+            Registro += "Genero: " + this.Genero + Environment.NewLine;
+            Registro += "Excluído" + this.Excluido;
+            return Registro;
+        }
     }    
 }
