@@ -53,5 +53,15 @@ namespace DIO.Series.Test
         //Then
             Assert.True(Instancia.RetornaExcluido() == SerieExcluido);
         }
+        [Fact]
+        public void SerieInstanciada_AoChamarMetodoExcluir_DevePossuirIndicadorDeExclusaoValorVerdadeiro()
+        {
+        //Given
+            Assert.True(Instancia.RetornaExcluido() == SerieExcluido);
+        //When
+            Instancia.Excluir();
+        //Then
+            Assert.True(Instancia.RetornaExcluido());
+        }
     }
 }
