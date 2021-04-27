@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\classes\DIO.Series.Class.csproj" />
     <ProjectReference Include="..\enum\DIO.Series.Enum.csproj" />
+    <ProjectReference Include="..\interfaces\DIO.Series.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
