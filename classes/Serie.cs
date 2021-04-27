@@ -24,5 +24,10 @@ namespace DIO.Series.Class
         {
             return this.Titulo;
         }
+
+        public int RetornaId()
+        {
+            return this.Id;
+        }
     }    
 }
