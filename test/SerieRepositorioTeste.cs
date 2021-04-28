@@ -87,7 +87,7 @@ namespace DIO.Series.Test
             SerieRepositorio RepositorioFicticio = new SerieRepositorio();
         //When
             int ProximoIdObtido = RepositorioFicticio.ProximoId();
-            int ProximoIdEsperado = 1;
+            int ProximoIdEsperado = 0;
         //Then
             Assert.Equal(ProximoIdObtido, ProximoIdEsperado);
         }
