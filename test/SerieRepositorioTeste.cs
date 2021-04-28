@@ -80,5 +80,16 @@ namespace DIO.Series.Test
             Assert.NotNull(SerieFicticiaRetornada);
             Assert.Equal<Serie>(SerieFicticia,SerieFicticiaRetornada);
         }
+        [Fact]
+        public void MetodoProximoId_AoSerInvocado_DeveRetornarProximoIndiceDisponivel()
+        {
+        //Given
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+        //When
+            int ProximoIdObtido = RepositorioFicticio.ProximoId();
+            int ProximoIdEsperado = 1;
+        //Then
+            Assert.Equal(ProximoIdObtido, ProximoIdEsperado);
+        }
     }
 }
