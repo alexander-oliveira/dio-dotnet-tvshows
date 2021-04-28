@@ -28,7 +28,7 @@ namespace DIO.Series.Class
 
         public int ProximoId()
         {
-            throw new NotImplementedException();
+            return ListaSerie.Count;
         }
 
         public Serie RetornaPorId(int id)
