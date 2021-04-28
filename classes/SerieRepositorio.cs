@@ -8,7 +8,7 @@ namespace DIO.Series.Class
         private List<Serie> ListaSerie = new List<Serie>();
         public void Atualiza(int id, Serie entidade)
         {
-            throw new NotImplementedException();
+            ListaSerie[id] = entidade;
         }
 
         public void Exclui(int id)
