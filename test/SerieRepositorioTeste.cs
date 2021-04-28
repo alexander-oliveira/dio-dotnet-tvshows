@@ -56,5 +56,29 @@ namespace DIO.Series.Test
                 item => item.RetornaTitulo().Contains(TituloSerieFicticia)
             );
         }
+        [Fact]
+        public void SerieRepositorio_AoInvocarMetodoRetornaPorId_DeveRetornarObjetoTipoSerieEsperado()
+        {
+        //Given
+            int IdSerieFicticia = 0;
+            Enum.Genero GeneroSerieFicticia = Enum.Genero.Acao;
+            String TituloSerieFicticia = "Série Fictícia";
+            int AnoSerieFicticia = 2020;
+            String DescricaoSerieFicticia = "Decrição Fictícia";
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+            Serie SerieFicticia = new Serie(
+                IdSerieFicticia,
+                GeneroSerieFicticia,
+                TituloSerieFicticia,
+                AnoSerieFicticia,
+                DescricaoSerieFicticia
+                );
+            RepositorioFicticio.Insere(SerieFicticia);
+        //When
+            Serie SerieFicticiaRetornada = RepositorioFicticio.RetornaPorId(IdSerieFicticia);
+        //Then
+            Assert.NotNull(SerieFicticiaRetornada);
+            Assert.Equal<Serie>(SerieFicticia,SerieFicticiaRetornada);
+        }
     }
 }
