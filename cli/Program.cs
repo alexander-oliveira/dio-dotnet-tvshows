@@ -30,7 +30,7 @@ namespace DIO.Serie.CLI
             throw new NotImplementedException();
         }
 
-        private static string ObterOpcaoUsuario()
+        private static int ObterOpcaoUsuario()
         {
             Console.WriteLine();
             Console.WriteLine("DIO Séries");
@@ -43,7 +43,7 @@ namespace DIO.Serie.CLI
             Console.WriteLine($"{Atividades.EncerrarPrograma} - Encerrar");
             Console.WriteLine();
             Console.WriteLine("Informe a atividade desejada:");
-            return Console.ReadLine();
+            return int.Parse(Console.ReadLine());
         }
     }
 }
