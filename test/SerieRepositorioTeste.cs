@@ -91,5 +91,29 @@ namespace DIO.Series.Test
         //Then
             Assert.Equal(ProximoIdObtido, ProximoIdEsperado);
         }
+        [Fact]
+        public void MetodoExcluir_AoSerInvocado_DeveMarcarIndicadorDeExclusao()
+        {
+        //Given
+            int IdSerieFicticia = 0;
+            Enum.Genero GeneroSerieFicticia = Enum.Genero.Acao;
+            String TituloSerieFicticia = "Série Fictícia";
+            int AnoSerieFicticia = 2020;
+            String DescricaoSerieFicticia = "Decrição Fictícia";
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+            Serie SerieFicticia = new Serie(
+                IdSerieFicticia,
+                GeneroSerieFicticia,
+                TituloSerieFicticia,
+                AnoSerieFicticia,
+                DescricaoSerieFicticia
+                );
+            RepositorioFicticio.Insere(SerieFicticia);
+        //When
+            RepositorioFicticio.Exclui(IdSerieFicticia);
+        //Then
+            bool IndicadorExclusao = RepositorioFicticio.RetornaPorId(IdSerieFicticia).RetornaExcluido();
+            Assert.True(IndicadorExclusao);
+        }
     }
 }
