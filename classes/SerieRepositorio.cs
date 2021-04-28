@@ -18,7 +18,7 @@ namespace DIO.Series.Class
 
         public void Insere(Serie entidade)
         {
-            throw new NotImplementedException();
+            ListaSerie.Add(entidade);
         }
 
         public List<Serie> Lista()
