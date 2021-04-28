@@ -32,7 +32,18 @@ namespace DIO.Serie.CLI
 
         private static string ObterOpcaoUsuario()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("DIO Séries");
+            Console.WriteLine($"{Atividades.ListarSerie} - Listar");
+            Console.WriteLine($"{Atividades.InserirSerie} - Inserir");
+            Console.WriteLine($"{Atividades.AtualizarSerie} - Atualizar");
+            Console.WriteLine($"{Atividades.ExcluirSerie} - Excluir");
+            Console.WriteLine($"{Atividades.VisualizarSerie} - Mostrar detalhes");
+            Console.WriteLine($"{Atividades.LimparTela} - Limpar tela");
+            Console.WriteLine($"{Atividades.EncerrarPrograma} - Encerrar");
+            Console.WriteLine();
+            Console.WriteLine("Informe a atividade desejada:");
+            return Console.ReadLine();
         }
     }
 }
