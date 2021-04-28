@@ -13,7 +13,7 @@ namespace DIO.Series.Class
 
         public void Exclui(int id)
         {
-            throw new NotImplementedException();
+            ListaSerie[id].Excluir();
         }
 
         public void Insere(Serie entidade)
