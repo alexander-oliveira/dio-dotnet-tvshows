@@ -3,6 +3,15 @@ using DIO.Series.Class;
 
 namespace DIO.Serie.CLI
 {
+    enum Atividades{
+        ListarSerie = 1,
+        InserirSerie = 2,
+        AtualizarSerie = 3,
+        ExcluirSerie = 4,
+        VisualizarSerie = 5,
+        LimparTela = 6,
+        EncerrarPrograma = 7
+    }
     class Program
     {
         static SerieRepositorio Repositorio = new SerieRepositorio();
