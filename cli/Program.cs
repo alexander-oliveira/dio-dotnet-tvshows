@@ -17,12 +17,12 @@ namespace DIO.Serie.CLI
         static SerieRepositorio Repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
-            String OpcaoUsuario;
+            int OpcaoUsuario;
             do
             {
                 OpcaoUsuario = ObterOpcaoUsuario();
                 SelecionarAtividade(OpcaoUsuario);
-            } while (OpcaoUsuario != "X");
+            } while (OpcaoUsuario != Atividades.EncerrarPrograma);
         }
 
         private static void SelecionarAtividade(string opcaoUsuario)
