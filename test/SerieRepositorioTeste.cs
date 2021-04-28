@@ -30,5 +30,31 @@ namespace DIO.Series.Test
             Assert.NotNull(ListaDeSeries);
             Assert.IsType<List<Serie>>(ListaDeSeries);
         }
+        [Fact]
+        public void SerieRepositorio_AoInvocarMetodoInsere_DeveAcrescentarSerieALista()
+        {
+        //Given
+            int IdSerieFicticia = 0;
+            Enum.Genero GeneroSerieFicticia = Enum.Genero.Acao;
+            String TituloSerieFicticia = "Série Fictícia";
+            int AnoSerieFicticia = 2020;
+            String DescricaoSerieFicticia = "Decrição Fictícia";
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+            Serie SerieFicticia = new Serie(
+                IdSerieFicticia,
+                GeneroSerieFicticia,
+                TituloSerieFicticia,
+                AnoSerieFicticia,
+                DescricaoSerieFicticia
+                );
+        //When
+            RepositorioFicticio.Insere(SerieFicticia);
+            List<Serie> ListaDeSeries = RepositorioFicticio.Lista();
+        //Then
+            Assert.NotEmpty(ListaDeSeries);
+            Assert.All(ListaDeSeries,
+                item => item.RetornaTitulo().Contains(TituloSerieFicticia)
+            );
+        }
     }
 }
