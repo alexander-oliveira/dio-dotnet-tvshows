@@ -115,5 +115,42 @@ namespace DIO.Series.Test
             bool IndicadorExclusao = RepositorioFicticio.RetornaPorId(IdSerieFicticia).RetornaExcluido();
             Assert.True(IndicadorExclusao);
         }
+        [Fact]
+        public void MetodoAtualiza_AoSerInvocado_DeveSubstituirObjetoNoRepositorio()
+        {
+        //Given
+            int IdSerieFicticiaA = 0;
+            Enum.Genero GeneroSerieFicticiaA = Enum.Genero.Acao;
+            String TituloSerieFicticiaA = "Série Fictícia A";
+            int AnoSerieFicticiaA = 2020;
+            String DescricaoSerieFicticiaA = "Decrição Fictícia A";
+            SerieRepositorio RepositorioFicticio = new SerieRepositorio();
+            Serie SerieFicticiaA = new Serie(
+                IdSerieFicticiaA,
+                GeneroSerieFicticiaA,
+                TituloSerieFicticiaA,
+                AnoSerieFicticiaA,
+                DescricaoSerieFicticiaA
+                );
+            RepositorioFicticio.Insere(SerieFicticiaA);
+            int IdSerieFicticiaB = 0;
+            Enum.Genero GeneroSerieFicticiaB = Enum.Genero.Documentario;
+            String TituloSerieFicticiaB = "Série Fictícia B";
+            int AnoSerieFicticiaB = 2021;
+            String DescricaoSerieFicticiaB = "Decrição Fictícia B";
+            Serie SerieFicticiaB = new Serie(
+                IdSerieFicticiaB,
+                GeneroSerieFicticiaB,
+                TituloSerieFicticiaB,
+                AnoSerieFicticiaB,
+                DescricaoSerieFicticiaB
+                );
+        //When
+            RepositorioFicticio.Atualiza(IdSerieFicticiaA,SerieFicticiaB);
+            Serie SerieRetornada = RepositorioFicticio.RetornaPorId(IdSerieFicticiaA);
+        //Then
+            Assert.Equal(SerieRetornada,SerieFicticiaB);
+            Assert.NotEqual(SerieRetornada, SerieFicticiaA);
+        }
     }
 }
