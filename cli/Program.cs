@@ -1,5 +1,6 @@
 ﻿using System;
 using DIO.Series.Class;
+using DIO.Series.Enum;
 
 namespace DIO.Series.CLI
 {
@@ -89,7 +90,50 @@ namespace DIO.Series.CLI
 
         private static void InserirSerie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Inserir nova série");
+
+            foreach (int numeroGenero in System.Enum.GetValues(typeof(Genero)))
+            {
+                Console.WriteLine
+                (
+                    "{0} {1}",
+                    numeroGenero,
+                    System.Enum.GetName(typeof(Genero), numeroGenero).Replace("_"," ")
+                );
+            }
+
+            Console.WriteLine("Informe o número correspondente ao gênero:");
+            object generoInformado;
+            System.Enum.TryParse(
+                typeof(Genero), 
+                Console.ReadLine(),
+                true,
+                out generoInformado
+            );
+
+            Console.WriteLine("Informe o título da série:");
+            String tituloInformado = Console.ReadLine();
+
+            Console.WriteLine("Informe o ano de início da série:");
+            int anoInformado;
+            int.TryParse(
+                Console.ReadLine(),
+                out anoInformado
+            );
+
+            Console.WriteLine("Informe a descrição da série:");
+            string descricaoInformada = Console.ReadLine();
+
+            Serie novaSerie = new Serie
+            (
+                id: Repositorio.ProximoId(),
+                genero: (Genero) generoInformado,
+                titulo: tituloInformado,
+                ano: anoInformado,
+                descricao: descricaoInformada
+            );
+
+            Repositorio.Insere(novaSerie);
         }
 
         private static void ListarSerie()
