@@ -28,6 +28,53 @@ namespace DIO.Serie.CLI
 
         private static void SelecionarAtividade(Atividades opcaoUsuario)
         {
+            switch (opcaoUsuario)
+            {
+                case Atividades.Listar:
+                    ListarSerie();
+                    break;
+                case Atividades.Inserir:
+                    InserirSerie();
+                    break;
+                case Atividades.Atualizar:
+                    AtualizarSerie();
+                    break;
+                case Atividades.Excluir:
+                    ExcluirSerie();
+                    break;
+                case Atividades.Visualizar_detalhes:
+                    VisualizarSerie();
+                    break;
+                case Atividades.Limpar_tela:
+                    Console.Clear();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private static void VisualizarSerie()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ExcluirSerie()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void AtualizarSerie()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void InserirSerie()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ListarSerie()
+        {
             throw new NotImplementedException();
         }
 
