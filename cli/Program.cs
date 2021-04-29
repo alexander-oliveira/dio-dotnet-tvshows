@@ -18,11 +18,19 @@ namespace DIO.Series.CLI
         static SerieRepositorio Repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
-            Atividades OpcaoUsuario;
+            Atividades OpcaoUsuario = 0;
             do
             {
-                OpcaoUsuario = ObterOpcaoUsuario();
-                SelecionarAtividade(OpcaoUsuario);
+                try
+                {
+                    OpcaoUsuario = ObterOpcaoUsuario();
+                    SelecionarAtividade(OpcaoUsuario);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("Opção inválida informada. Tente novamente.");
+                    continue;   
+                }
             } while (OpcaoUsuario != Atividades.Encerrar_programa);
         }
 
