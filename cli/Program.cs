@@ -1,7 +1,7 @@
 ﻿using System;
 using DIO.Series.Class;
 
-namespace DIO.Serie.CLI
+namespace DIO.Series.CLI
 {
     enum Atividades : int
     {
@@ -112,7 +112,7 @@ namespace DIO.Serie.CLI
             Console.WriteLine();
             Console.WriteLine("DIO Séries");
             Type TipoAtividades = typeof(Atividades);
-            Array ListaAtividades = Enum.GetValues(TipoAtividades);
+            Array ListaAtividades = System.Enum.GetValues(TipoAtividades);
             foreach (var atividade in ListaAtividades)
             {
                 Console.WriteLine($"{(int) atividade} - {atividade.ToString().Replace('_',' ')}");
@@ -120,7 +120,7 @@ namespace DIO.Serie.CLI
             Console.WriteLine();
             Console.WriteLine("Informe a atividade desejada:");
             String OpcaoUsuario = Console.ReadLine();
-            return (Atividades) Enum.Parse(typeof(Atividades),OpcaoUsuario);
+            return (Atividades) System.Enum.Parse(typeof(Atividades),OpcaoUsuario);
         }
     }
 }

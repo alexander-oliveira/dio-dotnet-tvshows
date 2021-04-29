@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.Enum", "enum\DIO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.Interfaces", "interfaces\DIO.Series.Interfaces.csproj", "{DCB45729-EDF1-4A9A-9D4D-82798998810A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Serie.CLI", "cli\DIO.Serie.CLI.csproj", "{9B1589CF-59CA-4E2C-A247-BEE52CD7DDAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIO.Series.CLI", "cli\DIO.Series.CLI.csproj", "{9B1589CF-59CA-4E2C-A247-BEE52CD7DDAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
