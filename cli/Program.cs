@@ -48,6 +48,8 @@ namespace DIO.Serie.CLI
                 case Atividades.Limpar_tela:
                     Console.Clear();
                     break;
+                case Atividades.Encerrar_programa:
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
