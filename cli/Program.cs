@@ -77,7 +77,34 @@ namespace DIO.Serie.CLI
 
         private static void ListarSerie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Listagem de séries");
+            dynamic Lista = Repositorio.Lista();
+            if(Lista.Count == 0)
+            {
+                Console.WriteLine("Nenhuma série cadastrada.");
+            }
+            else
+            {
+                String CabecalhoId = "ID";
+                String CabecalhoTitulo = "Título";
+                String CabecalhoIndicadorExcluido = "Excluído";
+                int TamanhoId = 3;
+                int TamanhoTitulo = 30;
+                int TamanhoIndicadoExcluido = 10;
+                Console.WriteLine("{0} {1} {2}",
+                    CabecalhoId.PadRight(TamanhoId),
+                    CabecalhoTitulo.PadLeft(TamanhoTitulo),
+                    CabecalhoIndicadorExcluido.PadRight(TamanhoIndicadoExcluido)
+                );
+                foreach (Serie serie in Lista)
+                {
+                    Console.WriteLine("{0} {1} {2}",
+                        serie.RetornaId(),
+                        serie.RetornaTitulo(),
+                        serie.RetornaExcluido() ? "Excluído" : ""
+                    );
+                }
+            }
         }
 
         private static Atividades ObterOpcaoUsuario()
