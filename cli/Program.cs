@@ -3,47 +3,48 @@ using DIO.Series.Class;
 
 namespace DIO.Serie.CLI
 {
-    enum Atividades{
-        ListarSerie = 1,
-        InserirSerie = 2,
-        AtualizarSerie = 3,
-        ExcluirSerie = 4,
-        VisualizarSerie = 5,
-        LimparTela = 6,
-        EncerrarPrograma = 7
+    enum Atividades : int
+    {
+        Listar = 1,
+        Inserir = 2,
+        Atualizar = 3,
+        Excluir = 4,
+        Visualizar_detalhes = 5,
+        Limpar_tela = 6,
+        Encerrar_programa = 7
     }
     class Program
     {
         static SerieRepositorio Repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
-            int OpcaoUsuario;
+            Atividades OpcaoUsuario;
             do
             {
                 OpcaoUsuario = ObterOpcaoUsuario();
                 SelecionarAtividade(OpcaoUsuario);
-            } while (OpcaoUsuario != Atividades.EncerrarPrograma);
+            } while (OpcaoUsuario != Atividades.Encerrar_programa);
         }
 
-        private static void SelecionarAtividade(string opcaoUsuario)
+        private static void SelecionarAtividade(Atividades opcaoUsuario)
         {
             throw new NotImplementedException();
         }
 
-        private static int ObterOpcaoUsuario()
+        private static Atividades ObterOpcaoUsuario()
         {
             Console.WriteLine();
             Console.WriteLine("DIO Séries");
-            Console.WriteLine($"{Atividades.ListarSerie} - Listar");
-            Console.WriteLine($"{Atividades.InserirSerie} - Inserir");
-            Console.WriteLine($"{Atividades.AtualizarSerie} - Atualizar");
-            Console.WriteLine($"{Atividades.ExcluirSerie} - Excluir");
-            Console.WriteLine($"{Atividades.VisualizarSerie} - Mostrar detalhes");
-            Console.WriteLine($"{Atividades.LimparTela} - Limpar tela");
-            Console.WriteLine($"{Atividades.EncerrarPrograma} - Encerrar");
+            Type TipoAtividades = typeof(Atividades);
+            Array ListaAtividades = Enum.GetValues(TipoAtividades);
+            foreach (var atividade in ListaAtividades)
+            {
+                Console.WriteLine($"{(int) atividade} - {atividade.ToString().Replace('_',' ')}");
+            }
             Console.WriteLine();
             Console.WriteLine("Informe a atividade desejada:");
-            return int.Parse(Console.ReadLine());
+            String OpcaoUsuario = Console.ReadLine();
+            return (Atividades) Enum.Parse(typeof(Atividades),OpcaoUsuario);
         }
     }
 }
