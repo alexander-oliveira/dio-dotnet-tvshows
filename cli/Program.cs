@@ -26,10 +26,19 @@ namespace DIO.Series.CLI
                     OpcaoUsuario = ObterOpcaoUsuario();
                     SelecionarAtividade(OpcaoUsuario);
                 }
-                catch (System.ArgumentOutOfRangeException)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Opção inválida informada. Tente novamente.");
-                    continue;   
+                    switch(ex)
+                    {
+                        case System.ArgumentOutOfRangeException:
+                            Console.WriteLine("Opção inválida informada. Tente novamente.");
+                            break;
+                        case System.NullReferenceException:
+                            Console.WriteLine("Nenhuma opção informada. Digite um número referente à atividade desejada.");
+                            break;
+                        default:
+                            throw;
+                    }
                 }
             } while (OpcaoUsuario != Atividades.Encerrar_programa);
         }
@@ -128,7 +137,9 @@ namespace DIO.Series.CLI
             Console.WriteLine();
             Console.WriteLine("Informe a atividade desejada:");
             String OpcaoUsuario = Console.ReadLine();
-            return (Atividades) System.Enum.Parse(typeof(Atividades),OpcaoUsuario);
+            Object Selecao;
+            System.Enum.TryParse(TipoAtividades,OpcaoUsuario, true, out Selecao);
+            return (Atividades) Selecao;
         }
     }
 }
