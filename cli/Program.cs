@@ -92,7 +92,16 @@ namespace DIO.Series.CLI
 
         private static void AtualizarSerie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Atualizar série");
+            Console.WriteLine("Informe o Id da série:");
+            int idSerie;
+            int.TryParse(
+                Console.ReadLine(),
+                out idSerie
+            );
+            Serie novaSerie = ObterDadosSerie();
+
+            Repositorio.Atualiza(idSerie, novaSerie);
         }
         private static Serie ObterDadosSerie()
         {
