@@ -75,7 +75,14 @@ namespace DIO.Series.CLI
 
         private static void VisualizarSerie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Informe o Id da série:");
+            int indiceSerie;
+            int.TryParse(
+                Console.ReadLine(),
+                out indiceSerie
+            );
+            var serie = Repositorio.RetornaPorId(indiceSerie);
+            Console.WriteLine(serie);
         }
 
         private static void ExcluirSerie()
