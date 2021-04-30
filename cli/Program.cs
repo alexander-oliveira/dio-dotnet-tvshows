@@ -87,7 +87,15 @@ namespace DIO.Series.CLI
 
         private static void ExcluirSerie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Exluir Série");
+            Console.WriteLine("Informe o Id da Série:");
+            int idSerie;
+            int.TryParse
+            (
+                Console.ReadLine(),
+                out idSerie
+            );
+            Repositorio.Exclui(idSerie);
         }
 
         private static void AtualizarSerie()
