@@ -94,11 +94,8 @@ namespace DIO.Series.CLI
         {
             throw new NotImplementedException();
         }
-
-        private static void InserirSerie()
+        private static Serie ObterDadosSerie()
         {
-            Console.WriteLine("Inserir nova série");
-
             foreach (int numeroGenero in System.Enum.GetValues(typeof(Genero)))
             {
                 Console.WriteLine
@@ -139,6 +136,13 @@ namespace DIO.Series.CLI
                 ano: anoInformado,
                 descricao: descricaoInformada
             );
+            return novaSerie;
+        }
+        private static void InserirSerie()
+        {
+            Console.WriteLine("Inserir nova série");
+
+            Serie novaSerie = ObterDadosSerie();
 
             Repositorio.Insere(novaSerie);
         }
